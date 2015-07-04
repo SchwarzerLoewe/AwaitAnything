@@ -1,0 +1,5 @@
+c:\users\filmee24\documents\visual studio 2015\Projects\AwaitAnything\AwaitAnything\bin\Debug\AwaitAnything.dll
+c:\users\filmee24\documents\visual studio 2015\Projects\AwaitAnything\AwaitAnything\bin\Debug\AwaitAnything.pdb
+c:\users\filmee24\documents\visual studio 2015\Projects\AwaitAnything\AwaitAnything\obj\Debug\AwaitAnything.csprojResolveAssemblyReference.cache
+c:\users\filmee24\documents\visual studio 2015\Projects\AwaitAnything\AwaitAnything\obj\Debug\AwaitAnything.dll
+c:\users\filmee24\documents\visual studio 2015\Projects\AwaitAnything\AwaitAnything\obj\Debug\AwaitAnything.pdb
