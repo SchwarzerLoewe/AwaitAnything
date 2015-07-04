@@ -3,3 +3,7 @@ c:\users\filmee24\documents\visual studio 2015\Projects\AwaitAnything\AwaitAnyth
 c:\users\filmee24\documents\visual studio 2015\Projects\AwaitAnything\AwaitAnything\obj\Debug\AwaitAnything.csprojResolveAssemblyReference.cache
 c:\users\filmee24\documents\visual studio 2015\Projects\AwaitAnything\AwaitAnything\obj\Debug\AwaitAnything.dll
 c:\users\filmee24\documents\visual studio 2015\Projects\AwaitAnything\AwaitAnything\obj\Debug\AwaitAnything.pdb
+C:\Users\filmee24\Documents\Github\AwaitAnything\AwaitAnything\bin\Debug\AwaitAnything.dll
+C:\Users\filmee24\Documents\Github\AwaitAnything\AwaitAnything\bin\Debug\AwaitAnything.pdb
+C:\Users\filmee24\Documents\Github\AwaitAnything\AwaitAnything\obj\Debug\AwaitAnything.dll
+C:\Users\filmee24\Documents\Github\AwaitAnything\AwaitAnything\obj\Debug\AwaitAnything.pdb
