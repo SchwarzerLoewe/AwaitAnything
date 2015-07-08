@@ -33,9 +33,7 @@ namespace AwaitAnything
 
         public static TaskAwaiter GetAwaiter(this Action action)
         {
-            Task task = new Task(action);
-            task.Start();
-            return task.GetAwaiter(); // Returns a TaskAwaiter.
+            return Task.Factory.StartNew(action).GetAwaiter();
         }
     }
 }

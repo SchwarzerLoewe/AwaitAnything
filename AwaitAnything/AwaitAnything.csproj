@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsyncExtensions.cs" />
     <Compile Include="Awaiter\FuncAwaitable.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="GenericExtensions.cs" />
