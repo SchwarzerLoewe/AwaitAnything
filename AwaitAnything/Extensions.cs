@@ -12,6 +12,11 @@ namespace AwaitAnything
             return Task.Delay(v).GetAwaiter();
         }
 
+        public static TaskAwaiter GetAwaiter(this long v)
+        {
+            return Task.Delay((int)v).GetAwaiter();
+        }
+
         public static TaskAwaiter GetAwaiter(this TimeSpan timeSpan)
         {
             return Task.Delay(timeSpan).GetAwaiter();
