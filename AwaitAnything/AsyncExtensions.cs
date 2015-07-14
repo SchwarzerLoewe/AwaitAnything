@@ -12,7 +12,7 @@ namespace AwaitAnything
         public static Task<Socket> AcceptAsync(this Socket socket)
         {
             if (socket == null)
-                throw new ArgumentNullException("socket");
+                throw new ArgumentNullException(nameof(socket));
 
             var tcs = new TaskCompletionSource<Socket>();
 

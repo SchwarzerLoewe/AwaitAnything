@@ -7,25 +7,13 @@ namespace AwaitAnything
 {
     public static class Extensions
     {
-        public static TaskAwaiter GetAwaiter(this int v)
-        {
-            return Task.Delay(v).GetAwaiter();
-        }
+        public static TaskAwaiter GetAwaiter(this int v) => Task.Delay(v).GetAwaiter();
 
-        public static TaskAwaiter GetAwaiter(this long v)
-        {
-            return Task.Delay((int)v).GetAwaiter();
-        }
+        public static TaskAwaiter GetAwaiter(this long v) => Task.Delay((int)v).GetAwaiter();
 
-        public static TaskAwaiter GetAwaiter(this TimeSpan timeSpan)
-        {
-            return Task.Delay(timeSpan).GetAwaiter();
-        }
+        public static TaskAwaiter GetAwaiter(this TimeSpan timeSpan) => Task.Delay(timeSpan).GetAwaiter();
 
-        public static TaskAwaiter GetAwaiter(this DateTimeOffset dateTimeOffset)
-        {
-            return (dateTimeOffset - DateTimeOffset.UtcNow).GetAwaiter();
-        }
+        public static TaskAwaiter GetAwaiter(this DateTimeOffset dateTimeOffset) => (dateTimeOffset - DateTimeOffset.UtcNow).GetAwaiter();
 
         public static TaskAwaiter<int> GetAwaiter(this Process process)
         {
@@ -36,9 +24,6 @@ namespace AwaitAnything
             return tcs.Task.GetAwaiter();
         }
 
-        public static TaskAwaiter GetAwaiter(this Action action)
-        {
-            return Task.Factory.StartNew(action).GetAwaiter();
-        }
+        public static TaskAwaiter GetAwaiter(this Action action) => Task.Factory.StartNew(action).GetAwaiter();
     }
 }

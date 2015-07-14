@@ -12,10 +12,7 @@ namespace AwaitAnything.Awaiter
             this.function = function;
         }
 
-        public IAwaiter<TResult> GetAwaiter()
-        {
-            return new FuncAwaiter<TResult>(function);
-        }
+        public IAwaiter<TResult> GetAwaiter() => new FuncAwaiter<TResult>(function);
     }
 
     public struct FuncAwaiter<TResult> : IAwaiter<TResult>
@@ -28,22 +25,13 @@ namespace AwaitAnything.Awaiter
             task.Start();
         }
 
-        bool IAwaiter<TResult>.IsCompleted
-        {
-            get
-            {
-                return task.IsCompleted;
-            }
-        }
+        bool IAwaiter<TResult>.IsCompleted => task.IsCompleted;
 
         public void OnCompleted(Action continuation)
         {
             new Task(continuation).Start();
         }
 
-        TResult IAwaiter<TResult>.GetResult()
-        {
-            return task.Result;
-        }
+        TResult IAwaiter<TResult>.GetResult() => task.Result;
     }
 }
