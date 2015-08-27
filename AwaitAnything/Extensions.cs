@@ -25,5 +25,7 @@ namespace AwaitAnything
         }
 
         public static TaskAwaiter GetAwaiter(this Action action) => Task.Factory.StartNew(action).GetAwaiter();
+
+        public static TaskAwaiter GetAwaiter(this string src) => Task.Delay(TimeConverter.Convert(src)).GetAwaiter();
     }
 }

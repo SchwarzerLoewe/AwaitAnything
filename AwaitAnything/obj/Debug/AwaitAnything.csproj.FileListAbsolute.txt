@@ -7,4 +7,3 @@ C:\Users\filmee24\Documents\Github\AwaitAnything\AwaitAnything\bin\Debug\AwaitAn
 C:\Users\filmee24\Documents\Github\AwaitAnything\AwaitAnything\bin\Debug\AwaitAnything.pdb
 C:\Users\filmee24\Documents\Github\AwaitAnything\AwaitAnything\obj\Debug\AwaitAnything.dll
 C:\Users\filmee24\Documents\Github\AwaitAnything\AwaitAnything\obj\Debug\AwaitAnything.pdb
-C:\Users\filmee24\Documents\Github\AwaitAnything\AwaitAnything\obj\Debug\AwaitAnything.csprojResolveAssemblyReference.cache
