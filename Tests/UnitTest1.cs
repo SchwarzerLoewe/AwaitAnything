@@ -14,10 +14,10 @@ namespace Tests
         }
 
         [TestMethod]
-        public void DelayTestTime()
+        public async Task DelayTestTime()
         {
-            //await "5s";
-            Task.Delay(TimeConverter.Convert("5s")).Wait();
+            await "5s";
+            //Task.Delay(TimeConverter.Convert("5s")).Wait();
         }
     }
 }
