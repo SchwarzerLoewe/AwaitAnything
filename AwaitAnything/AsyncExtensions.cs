@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AwaitAnything
 {
@@ -42,6 +43,48 @@ namespace AwaitAnything
                  return from item in source
                         select body(item);
              });
+        }
+
+        public static Task<TcpClient> ConnectAsync(this TcpClient client, string host, int port)
+        {
+            if (client == null)
+                throw new ArgumentNullException(nameof(client));
+
+            var tcs = new TaskCompletionSource<TcpClient>();
+
+            client.BeginConnect(host, port, new AsyncCallback((asyncResult) =>
+            {
+                try
+                {
+                    var s = asyncResult.AsyncState as TcpClient;
+                    s.EndConnect(asyncResult);
+
+                    tcs.SetResult(client);
+                }
+                catch (Exception ex)
+                {
+                    tcs.SetException(ex);
+                }
+            }), client);
+
+            return tcs.Task;
+        }
+
+        public static Task<DialogResult> ShowDialogAsync(this Form frm)
+        {
+            TaskCompletionSource<DialogResult> taskCompletionSource = new TaskCompletionSource<DialogResult>();
+
+            EventHandler eventHandler = null;
+            eventHandler =
+                (sender, e) =>
+                {
+                    frm.Closed -= eventHandler;
+                    taskCompletionSource.SetResult(frm.DialogResult);
+                };
+            frm.Closed += eventHandler;
+            frm.Show();
+
+            return taskCompletionSource.Task;
         }
     }
 }

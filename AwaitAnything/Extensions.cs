@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AwaitAnything.Awaiter;
+using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -21,11 +22,12 @@ namespace AwaitAnything
             process.EnableRaisingEvents = true;
             process.Exited += (s, e) => tcs.TrySetResult(process.ExitCode);
             if (process.HasExited) tcs.TrySetResult(process.ExitCode);
+            
             return tcs.Task.GetAwaiter();
         }
 
         public static TaskAwaiter GetAwaiter(this Action action) => Task.Factory.StartNew(action).GetAwaiter();
-
+        
         public static TaskAwaiter GetAwaiter(this string src) => Task.Delay(TimeConverter.Convert(src)).GetAwaiter();
     }
 }
