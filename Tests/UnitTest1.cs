@@ -31,9 +31,10 @@ namespace Tests
         }
 
         [TestMethod]
-        public Task DelayTestTime_Should_Throw_Exception()
+        public void DelayTestTime()
         {
-            return Task.Delay(TimeConverter.Convert("5se"));
+            //await "5s";
+            Task.Delay(TimeConverter.Convert("5s")).Wait();
         }
     }
 }
