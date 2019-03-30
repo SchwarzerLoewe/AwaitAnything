@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Diagnostics;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace Tests
@@ -36,5 +37,6 @@ namespace Tests
             //await "5s";
             Task.Delay(TimeConverter.Convert("5s")).Wait();
         }
+
     }
 }
